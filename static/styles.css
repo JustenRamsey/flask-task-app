@@ -1,0 +1,11 @@
+h3 {
+color: white
+}
+
+h2.card-title {
+    color: #FFD43B;
+}
+
+.delete-button {
+    float: right;
+}
