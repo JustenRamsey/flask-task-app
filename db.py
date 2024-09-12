@@ -1,9 +1,11 @@
 import sqlite3 
 import click
+import os
 from flask import Flask, request, g, render_template, redirect, url_for
 from flask import current_app
 
-DATABASE = 'mydatabase.db'
+BASE_DIR = os.path.dir(os.path.abspath(__file__))
+DATABASE = os.path.join(BASE_DIR, 'mydatabase.db')
 
 def get_db():
     if 'db' not in g:
