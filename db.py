@@ -3,8 +3,8 @@ import click
 import os
 from flask import Flask, request, g, render_template, redirect, url_for
 from flask import current_app
-
-BASE_DIR = os.path.dir(os.path.abspath(__file__))
+ #correct typo. Its actually os.path.dirname 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATABASE = os.path.join(BASE_DIR, 'mydatabase.db')
 
 def get_db():
