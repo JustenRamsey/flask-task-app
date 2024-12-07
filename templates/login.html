@@ -24,13 +24,13 @@
                       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
                             <button type="button" class=" btn btn-dark">
-                                <a class="nav-link active" aria-current="page" href="/add_task">Home  <i class="fa-solid fa-house fa-sm" style="color: #FFD43B;"></i></a>
+                                <a class="nav-link active" aria-current="page" href="{{url_for('register')}}">Register  <i class="fa-solid fa-house fa-sm" style="color: #FFD43B;"></i></a>
                             </button>
-                            <li class="nav-item">
-                                <button type="button" class=" btn btn-dark">
-                                    <a class="nav-link active" aria-current="page" href="/login">Login  <i class="fa-solid fa-door-open fa-sm" style="color: #FFD43B;"></i></a>
-                                </button>
-                            </li>
+                             <!-- <li class="nav-item"> -->
+                                <!-- <button type="button" class=" btn btn-dark"> -->
+                                    <!-- <a class="nav-link active" aria-current="page" href="/login">Login  <i class="fa-solid fa-door-open fa-sm" style="color: #FFD43B;"></i></a> -->
+                                <!-- </button> -->
+                            <!-- </li> -->
                         </li>
                         </nav>
             <!-- Navbar -->
@@ -38,24 +38,20 @@
             <!-- Login form -->
         <div class="container mt-5">
             <br>
-            <div class="card bg-secondary">
+            <div class="card w-50 mx-auto bg-secondary">
                 <div class="card-header">
                     <h2 class="card-title mb-4 text-center">Please Login</h2>
                 </div>
                 <div class="card-body">
                     <form action="{{ url_for('login') }}" method="POST" class="align-items-center">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Username" name="username" value="{{ request.form.username }}">
+                            <input type="text" class="form-control" placeholder="Username" name="username" value="{{ request.form.username }}" required>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control"  placeholder="Password" name="password" value="{{ request.form.password }}">
+                            <input type="password" class="form-control"  placeholder="Password" name="password" value="{{ request.form.password }}" required>
                         </div>
                         <div class="text-center">
-                            <input class="btn btn-success" type="submit" value="Login">
-                        </div>
-                        <!-- figure out how to align signup button to the right -->
-                        <div class="text-center">
-                            <input class="btn btn-danger" type="submit" value="Sign-up">
+                            <input class="btn btn-lg btn-success" id="login-button" type="submit" value="Login">
                         </div>
                     </form>
                 </div>

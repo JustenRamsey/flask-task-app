@@ -9,3 +9,7 @@ h2.card-title {
 .delete-button {
     float: right;
 }
+
+#login-button , #signup-button {
+    display: inline-block;
+}
